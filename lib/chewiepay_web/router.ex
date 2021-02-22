@@ -7,6 +7,8 @@ defmodule ChewiepayWeb.Router do
 
   scope "/api", ChewiepayWeb do
     pipe_through :api
+
+    get "/:filename", WelcomeController, :index
   end
 
   # Enables LiveDashboard only for development
