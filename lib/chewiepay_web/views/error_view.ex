@@ -12,6 +12,10 @@ defmodule ChewiepayWeb.ErrorView do
     %{message: translate_errors(changeset)}
   end
 
+  def render("400.json", %{result: message}) do
+    %{message: message}
+  end
+
   defp translate_errors(changeset) do
     traverse_errors(changeset, fn {msg, opts} ->
       Enum.reduce(opts, msg, fn {key, value}, acc ->
