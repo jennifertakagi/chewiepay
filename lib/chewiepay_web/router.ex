@@ -14,6 +14,8 @@ defmodule ChewiepayWeb.Router do
 
     post "/accounts/:id/deposit", AccountsController, :deposit
     post "/accounts/:id/withdrawal", AccountsController, :withdrawal
+
+    post "/accounts/transaction", AccountsController, :transaction
   end
 
   # Enables LiveDashboard only for development
