@@ -1,13 +1,24 @@
 defmodule  ChewiepayWeb.UsersView do
-  alias Chewiepay.User
+  alias Chewiepay.{Account, User}
 
-  def render("create.json", %{user: %User{id: id, name: name, nickname: nickname}}) do
+  def render("create.json", %{
+    user: %User{
+        account: %Account{id: account_id, balance: balance},
+        id: id,
+        name: name,
+        nickname: nickname
+        }
+      }) do
     %{
       message: "User #{name} created",
       user: %{
         id: id,
         name: name,
-        nickname: nickname
+        nickname: nickname,
+        account: %{
+          id: account_id,
+          balance: balance
+        }
       }
     }
   end
