@@ -98,21 +98,21 @@ Features:
    git clone https://github.com/jennifertakagi/chewiepay.git
    ```
 2. Install dependencies
-   ```sh
+  ```sh
   mix deps.get
-   ```
+  ```
 3. Create a docker image of Postgres following the command
-   ```sh
+  ```sh
   docker run --name chewieapi_dev -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres 
-   ```
+  ```
 4. Run database migrations
-   ```sh
+  ```sh
   mix ecto.setup
-   ```
+  ```
 5. Run the following command in order to start the application in a development environment:
-   ```sh
+  ```sh
   mix phx.server
-   ```
+  ```
 
 
 
